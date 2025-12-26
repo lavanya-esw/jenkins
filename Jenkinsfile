@@ -26,6 +26,12 @@ pipeline{
             echo "I will always run!!!"
             cleanWs()
         }
+        success{
+            echo "build is success....."
+        }
+        failure{
+            echo "build is failed......"
+        }
 
     }
 }
