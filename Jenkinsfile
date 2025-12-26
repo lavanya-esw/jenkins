@@ -16,12 +16,20 @@ pipeline{
         }
         stage('test stage'){
             steps{
-                echo "testing....."
+                script{
+                    sh """
+                        echo "testing....."
+                    """
+                }
             }
         }
         stage('deploy stage'){
             steps{
-                echo "deploying....."
+                script{
+                    sh """
+                        echo "deploying....."
+                    """
+                }
             }
         }
     }
