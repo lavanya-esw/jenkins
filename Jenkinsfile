@@ -24,7 +24,7 @@ pipeline{
     post{
         always{
             echo "I will always run!!!"
-            cleanWs()
+            cleanws()
         }
         success{
             echo "build is success....."
