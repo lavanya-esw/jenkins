@@ -40,6 +40,14 @@ pipeline{
             }
         }
         stage('deploy stage'){
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'NAME', defaultValue: 'Lavanya', description: 'Who should I say hello to?')
+                }
+            }
             steps{
                 script{
                     sh """
