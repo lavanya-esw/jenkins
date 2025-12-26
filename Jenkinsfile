@@ -54,6 +54,9 @@ pipeline{
         failure{
             echo "build is failed......"
         }
+        aborted{
+            echo "build is aborted...."
+        }
 
     }
 }
