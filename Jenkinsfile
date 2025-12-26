@@ -23,7 +23,7 @@ pipeline{
             steps{
                 script{
                     sh """
-                        echo "building....."
+                        echo "building by ${param.USER}"
                         echo ${COURSE}
                     """
                 }
