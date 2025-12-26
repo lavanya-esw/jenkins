@@ -7,7 +7,11 @@ pipeline{
     stages{
         stage('build stage'){
             steps{
-                echo "building....."
+                script{
+                    sh """
+                        echo "building....."
+                    """
+                }
             }
         }
         stage('test stage'){
@@ -27,7 +31,7 @@ pipeline{
             // cleanws()
         }
         success{
-            echo 'build is success.....'
+            echo "build is success....."
         }
         failure{
             echo "build is failed......"
